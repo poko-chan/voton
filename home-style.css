@@ -1,1 +1,125 @@
+/* --- 変数設定（ダークモード対応） --- */
+:root {
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-main: #333333;
+    --text-sub: #666666;
+    --accent-color: #007bff;
+    --button-text: #ffffff;
+    --description-bg: #f8f9fa;
+    --border-color: #dddddd;
+}
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --card-bg: #1e1e1e;
+        --text-main: #e0e0e0;
+        --text-sub: #b0b0b0;
+        --accent-color: #3793ff;
+        --description-bg: #2a2a2a;
+        --border-color: #444444;
+    }
+}
+
+/* --- ベーススタイル --- */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* --- カード：ふわっと浮き上がるアニメーション --- */
+.profile-card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border-top: 5px solid var(--accent-color);
+    
+    /* アニメーション設定 */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- アイコン：回転しながら登場 --- */
+.profile-image img {
+    width: 110px;
+    height: 110px;
+    border-radius: 20%;
+    border: 2px solid var(--accent-color);
+    padding: 5px;
+    background: var(--card-bg);
+    
+    animation: rotateIn 1s ease;
+}
+
+@keyframes rotateIn {
+    from { transform: rotate(-10deg) scale(0.9); }
+    to { transform: rotate(0) scale(1); }
+}
+
+.profile-name {
+    font-size: 1.6rem;
+    margin: 20px 0 5px;
+}
+
+.profile-tagline {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.profile-description {
+    background: var(--description-bg);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--border-color);
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: var(--text-sub);
+}
+
+/* --- ボタン --- */
+.link-button {
+    display: block;
+    padding: 14px;
+    background: var(--accent-color);
+    color: var(--button-text);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.2s, filter 0.2s;
+    margin-bottom: 12px;
+}
+
+.link-button:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+.link-button.secondary {
+    background: transparent;
+    color: var(--text-sub);
+    border: 1px solid var(--border-color);
+}
