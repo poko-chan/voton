@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="ja-JP">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voton Dengiken Accountにログイン - Voton</title>
+    <title>Voton Dengiken Accountに学籍番号を入力してログイン - Voton</title>
     <style>
         @font-face {
-            font-family: "Kaisotai";
-            src: url("/src/font/Kaisotai-Next-UP-B.woff2") format("woff2");
-        }
-        * {
-            font-family: "Kaisotai", sans-serif;
-            box-sizing: border-box;
+          font-family: "Kaisotai";
+          src: url("/src/font/Kaisotai-Next-UP-B.woff2") format("woff2");
         }
         body {
             margin: 0;
@@ -21,19 +17,19 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #0ff;
-            text-shadow: 0 0 8px #0ff;
+        }
+        *{
+            font-family: "Kaisotai",sans-serif;
         }
 
         h1 {
-            margin-bottom: 10px;
-            font-size: 24px;
+            color: #0ff;
+            text-shadow: 0 0 8px #0ff;
+            margin-bottom: 20px;
         }
-
-        h3 {
-            margin-bottom: 30px;
-            font-weight: normal;
-            font-size: 16px;
+        body{
+            color: #0ff;
+            text-shadow: 0 0 8px #0ff;
         }
 
         .login-container {
@@ -66,7 +62,6 @@
             transition: 0.3s;
             text-shadow: 0 0 6px #979494;
         }
-
         .input-group input:focus ~ label,
         .input-group input:valid ~ label {
             top: -15px;
@@ -97,44 +92,30 @@
             color: #000;
             box-shadow: 0 0 20px rgba(0, 251, 255, 0.4);
         }
-
-        #user_id {
-            border-bottom: 1px solid #0ff;
-            padding-bottom: 2px;
-            margin-right: 4px;
-        }
     </style>
 </head>
 <body>
     <h1>部員ログイン</h1>
-    <h3>おかえりなさい、<span id="user_id">ユーザー</span>さん</h3>
-    
     <div class="login-container">
-        <form id="login_form">
+        <form>
             <div class="input-group">
-                <input type="password" required id='pass_input'>
-                <label for='pass_input'>パスワード入力</label>
+                <input type="text" required id='num_input'>
+                <label for='num_input'>学籍番号</label>
             </div>
-            <button type="submit" id="login_btn">ログイン</button>
+            <button type="submit" id="login_btn">次へ</button>
         </form>
     </div>
-
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const studentId = urlParams.get('ad');
-        if (studentId) {
-            document.getElementById('user_id').textContent = studentId;
-        }
-
-        document.getElementById('login_form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const password = document.getElementById('pass_input').value;
-            if (password) {
-                // ログイン処理
-            } else {
-                alert('パスワードを入力してください');
-            }
-        });
-    </script>
 </body>
+<script>
+    document.getElementById('login_btn').addEventListener('click', function(event) {
+      event.preventDefault()
+      let address = document.getElementById('num_input').value;
+      if (address){
+        let redirectURL = '/login/mail-pass.html?ad=' + encodeURIComponent(address);
+        window.location.href = redirectURL;
+      }else{
+        alert('学籍番号を入力してください');
+      }
+    });
+  </script>
 </html>
