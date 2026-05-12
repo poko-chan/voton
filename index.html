@@ -10,6 +10,7 @@
             font-family: sans-serif;
             text-align: center;
             padding-top: 50px;
+            padding-bottom: 50px;
         }
 
         .btn {
@@ -22,6 +23,41 @@
             text-decoration: none;
             font-size: 18px;
         }
+
+        .follow-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #0ff;
+            opacity: 0.7;
+        }
+
+        .follow-section h3 {
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        .follow-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .follow-links a {
+            color: #0ff;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 16px;
+            border: 1px solid #0ff;
+            transition: 0.3s;
+        }
+
+        .follow-links a:hover {
+            background-color: #0ff;
+            color: #1b2c4f;
+        }
     </style>
 </head>
 <body>
@@ -30,5 +66,13 @@
     
     <a href="https://voton-dengiken.vercel.app/login" class="btn">ログイン</a>
     <a href="https://voton-dengiken.vercel.app/signup" class="btn">登録</a>
+
+    <div class="follow-section">
+        <h3>開発者をフォロー</h3>
+        <div class="follow-links">
+            <a href="https://github.com/poko-chan" target="_blank">poko-chan</a>
+            <a href="https://github.com/mcjapan" target="_blank">mcjapan</a>
+        </div>
+    </div>
 </body>
 </html>
