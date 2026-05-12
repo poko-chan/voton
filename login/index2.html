@@ -1,96 +1,45 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
-        body {
-            margin: 0;
-            background: #0b0e14;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: sans-serif;
-        }
-
-        .login-container {
-            width: 300px;
-        }
-
-        .input-group {
-            position: relative;
-            margin-bottom: 30px;
-        }
-
-        .input-group input {
-            width: 100%;
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid #333;
-            padding: 10px 0;
-            color: #fff;
-            font-size: 16px;
-            outline: none;
-            transition: 0.3s;
-        }
-
-        .input-group label {
-            position: absolute;
-            top: 10px;
-            left: 0;
-            color: #666;
-            pointer-events: none;
-            transition: 0.3s;
-        }
-
-        .input-group input:focus ~ label,
-        .input-group input:valid ~ label {
-            top: -15px;
-            font-size: 12px;
-            color: #00fbff;
-        }
-
-        .input-group input:focus {
-            border-bottom: 1px solid #00fbff;
-        }
-
-        .login-btn {
-            width: 100%;
-            padding: 12px;
-            background: transparent;
-            border: 1px solid #00fbff;
-            color: #00fbff;
-            font-size: 14px;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: 0.4s;
-            text-transform: uppercase;
-        }
-
-        .login-btn:hover {
-            background: #00fbff;
-            color: #000;
-            box-shadow: 0 0 20px rgba(0, 251, 255, 0.4);
-        }
-    </style>
-</head>
-<body>
-
-    <div class="login-container">
-        <form>
-            <div class="input-group">
-                <input type="text" required>
-                <label>学籍番号</label>
-            </div>
-            <div class="input-group">
-                <input type="password" required>
-                <label>パスワード</label>
-            </div>
-            <button type="button" class="login-btn">LOGIN</button>
-        </form>
+<html>
+  <head>
+    <title>Voton Dengiken Accountにログイン</title>
+  </head>
+  <body>
+    <header>
+      <h1>Voton dengiken Account</h1>
+    </header>
+    <div class='login_dengi'>
+      <p>Voton Dengiken Accountにサインインするためメールアドレスを入力してください</p>
+      <input type='email' id='mailadress_input' placeholder='メールアドレスを入力... 例:sample@example.com'></input>
+      <br><button type='submit' id='submit_btn'>次へ</button>
     </div>
-
-</body>
+  </body>
+  <style>
+    input#mailadress_input{
+      width:20rem;
+      height:1rem;
+    }
+    body{
+      text-align:center;
+      background-color:#a8cfff
+    }
+    div.login_dengi{
+      background-color:#d6f5d6;
+      margin:10px;
+      box-shadow:8px 8px 6px gray;
+      border-radius:8px;
+      width:60%
+      boader-color:solid 2px;
+    }
+  </style>
+  <script>
+    document.getElementById('submit_btn').addEventListener('click', function(event) {
+      let adress = document.getElementById('mailadress_input').value;
+      if (adress){
+        let redirectURL = '/login/mail-pass.html?ad=' + encodeURIComponent(adress);
+        window.location.href = redirectURL;
+      }else{
+        alert('メールアドレスを正しく入力してください');
+      }
+    });
+  </script>
 </html>
