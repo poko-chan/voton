@@ -1,40 +1,101 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Voton Dengiken Accountを作成</title>
-  </head>
-  <body>
-    <header>
-      <h1>未登録部員登録画面</h1></h1>
-    </header>
-    <div class='login_dengi'>
-      <p>部員専用のため、一般者の登録はできません。</p>
-      <input type='text' id='scnum_input' placeholder='学籍番号'></input>
-      <input type='name' id='mailadress_input' placeholder='姓'></input>
-      <input type='name' id='mailadress_input' placeholder='名'></input>
-      <br><button type='submit'>請求する</button>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voton dengikenにログイン</title>
+    <style>
+        body {
+            margin: 0;
+            background: #0b0e14;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            color: #00fbff;
+            margin-bottom: 20px;
+        }
+
+        .login-container {
+            width: 300px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .input-group input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #333;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            color: #666;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus ~ label,
+        .input-group input:valid ~ label {
+            top: -15px;
+            font-size: 12px;
+            color: #00fbff;
+        }
+
+        .input-group input:focus {
+            border-bottom: 1px solid #00fbff;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid #00fbff;
+            color: #00fbff;
+            font-size: 14px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.4s;
+            text-transform: uppercase;
+        }
+
+        .login-btn:hover {
+            background: #00fbff;
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 251, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <h1>部員ログイン</h1>
+    <div class="login-container">
+        <form>
+            <div class="input-group">
+                <input type="text" required>
+                <label>学籍番号</label>
+            </div>
+            <div class="input-group">
+                <input type="password" required>
+                <label>名前　例:芝浦太郎</label>
+            </div>
+            <button type="button" class="login-btn">申請</button>
+        </form>
     </div>
-  </body>
-  <style>
-    input#mailadress_input{
-      width:3rem;
-      height:1rem;
-    }
-    input#scnum_input{
-      width:5rem;
-      height:1rem;
-    }
-    body{
-      text-align:center;
-      background-color:#a8cfff
-    }
-    div.login_dengi{
-      background-color:#d6f5d6;
-      margin:10px;
-      box-shadow:8px 8px 6px gray;
-      border-radius:8px;
-      width:60%
-      boader-color:solid 2px;
-    }
-  </style>
+</body>
 </html>
