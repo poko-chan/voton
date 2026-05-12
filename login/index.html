@@ -14,18 +14,12 @@
             justify-content: center;
             align-items: center;
             font-family: sans-serif;
+            color: #0ff; /* 文字色のみ指定 */
         }
 
         h1 {
             color: #0ff;
-            text-shadow: 0 0 8px #0ff;
             margin-bottom: 20px;
-        }
-
-        /* body:not... のセレクタも元の通り維持 */
-        body:not(.input-group input ~ label,.input-group input ~ label){
-            color: #0ff;
-            text-shadow: 0 0 8px #0ff;
         }
 
         .login-container {
@@ -63,7 +57,6 @@
             top: -15px;
             font-size: 12px;
             color: #0ff;
-            text-shadow: 0 0 8px #0ff;
         }
 
         .input-group input:focus {
@@ -80,7 +73,6 @@
             letter-spacing: 2px;
             cursor: pointer;
             text-transform: uppercase;
-            /* transitionとhover時の背景・色変更を削除しました */
         }
     </style>
 </head>
