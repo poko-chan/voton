@@ -35,7 +35,7 @@
     document.getElementById('submit_btn').addEventListener('click', function(event) {
       let adress = document.getElementById('mailadress_input').value;
       if (adress){
-        let redirectURL = 'mail-pass.html?ad=' + encodeURIComponent(adress);
+        let redirectURL = '/login/mail-pass.html?ad=' + encodeURIComponent(adress);
         window.location.href = redirectURL;
       }else{
         alert('メールアドレスを正しく入力してください');
