@@ -55,7 +55,7 @@
             pointer-events: none;
             transition: 0.3s;
             text-shadow: 0 0 6px #979494;
-
+        }
         .input-group input:focus ~ label,
         .input-group input:valid ~ label {
             top: -15px;
@@ -68,7 +68,7 @@
             border-bottom: 1px solid #0ff;
         }
 
-        button.login-btn {
+        button.login_btn {
             width: 100%;
             padding: 12px;
             background: transparent;
@@ -81,7 +81,7 @@
             text-transform: uppercase;
         }
 
-        button.login-btn:hover {
+        button.login_btn:hover {
             background: #0ff;
             color: #000;
             box-shadow: 0 0 20px rgba(0, 251, 255, 0.4);
@@ -94,7 +94,7 @@
         <form>
             <div class="input-group">
                 <input type="text" required id='num_input'>
-                <label>学籍番号</label>
+                <label for='num_input'>学籍番号</label>
             </div>
             <button type="submit" id="login_btn">ログイン</button>
         </form>
@@ -102,9 +102,10 @@
 </body>
 <script>
     document.getElementById('login_btn').addEventListener('click', function(event) {
-      let adress = document.getElementById('num_input').value;
-      if (adress){
-        let redirectURL = '/login/mail-pass.html?ad=' + encodeURIComponent(adress);
+      event.preventDefault()
+      let address = document.getElementById('num_input').value;
+      if (address){
+        let redirectURL = '/login/mail-pass.html?ad=' + encodeURIComponent(address);
         window.location.href = redirectURL;
       }else{
         alert('学籍番号を入力してください');
