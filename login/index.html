@@ -93,15 +93,22 @@
     <div class="login-container">
         <form>
             <div class="input-group">
-                <input type="text" required>
+                <input type="text" required id='num_input'>
                 <label>学籍番号</label>
-            </div>
-            <div class="input-group">
-                <input type="password" required>
-                <label>パスワード</label>
             </div>
             <button type="submit" class="login-btn">ログイン</button>
         </form>
     </div>
 </body>
+<script>
+    document.getElementById('login_btn').addEventListener('click', function(event) {
+      let adress = document.getElementById('num_input').value;
+      if (adress){
+        let redirectURL = '/login/mail-pass.html?ad=' + encodeURIComponent(adress);
+        window.location.href = redirectURL;
+      }else{
+        alert('学籍番号を入力してください');
+      }
+    });
+  </script>
 </html>
