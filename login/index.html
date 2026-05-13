@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voton Dengiken Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
-        }
         body {
             margin: 0;
             background: #0b0e14;
@@ -21,20 +19,27 @@
             color: #0ff;
             text-shadow: 0 0 8px #0ff;
         }
+
+        /* フォントを M PLUS Rounded 1c に変更 */
         * {
-            font-family: "Kaisotai", sans-serif;
+            font-family: 'M PLUS Rounded 1c', sans-serif !important;
             box-sizing: border-box;
         }
+
         h1 {
             margin-bottom: 20px;
+            font-weight: 700; /* 見出しを太く */
         }
+
         .login-container {
             width: 300px;
         }
+
         .input-group {
             position: relative;
             margin-bottom: 30px;
         }
+
         .input-group input {
             width: 100%;
             background: transparent;
@@ -46,6 +51,7 @@
             outline: none;
             transition: 0.3s;
         }
+
         .input-group label {
             position: absolute;
             top: 10px;
@@ -55,6 +61,7 @@
             transition: 0.3s;
             text-shadow: 0 0 6px #979494;
         }
+
         .input-group input:focus ~ label,
         .input-group input:valid ~ label {
             top: -15px;
@@ -62,9 +69,11 @@
             color: #0ff;
             text-shadow: 0 0 8px #0ff;
         }
+
         .input-group input:focus {
             border-bottom: 1px solid #0ff;
         }
+
         button#login_btn {
             width: 100%;
             padding: 12px;
@@ -76,7 +85,9 @@
             cursor: pointer;
             transition: 0.4s;
             text-transform: uppercase;
+            font-weight: 700;
         }
+
         button#login_btn:hover {
             background: #0ff;
             color: #000;
@@ -102,7 +113,7 @@
     <script>
         document.getElementById('login_form').addEventListener('submit', function(e) {
             e.preventDefault();
-            // 何もしない
+            // 現在は何も起きないように設定
         });
     </script>
 </body>
