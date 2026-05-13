@@ -101,12 +101,7 @@
     <script>
         document.getElementById('login_form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const id = document.getElementById('num_input').value;
-            const pw = document.getElementById('pass_input').value;
-            if (id && pw) {
-                console.log('Login attempt:', id);
-                alert('ログイン処理（DB未接続）');
-            }
+            // 何もしない
         });
     </script>
 </body>
