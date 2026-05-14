@@ -1,2 +1,1 @@
-# voton dengiken
-voton dengiken。メンバーズサイト
+##Voton × Dengiken = Voton Dengiken .
