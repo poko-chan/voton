@@ -33,3 +33,7 @@ Voton Dengikenとは、
 簡単です！電技研に入部すればOKです！
 
 そして、入部したらhttps://voton-dengiken.vercel.app/にアクセスして利用を開始してください！
+
+著:MCJP_(MCJAPAN)
+企画:Poko-chan,MCJP_(MCJAPAN)
+
