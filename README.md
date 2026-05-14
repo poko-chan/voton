@@ -11,6 +11,7 @@ It's easy! All you have to do is join the Dengiken club!
 And once you've joined, go to https://voton-dengiken.vercel.app/ and start using it.
 
 #<img style="height:1rem;" src="https://flagicons.lipis.dev/flags/4x3/jp.svg">Japanese
+
 #Voton ×　電技研 = Voton Dengiken.
 
 これは、シンプルな管理システム。
