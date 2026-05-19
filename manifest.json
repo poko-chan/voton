@@ -3,7 +3,9 @@
   "short_name": "dengiken",
   "theme_color": "#1a1a1a",
   "background_color": "#1a1a1a",
-  "display": "fullscreen", 
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "minimal-ui"],
+  "orientation": "any",
   "start_url": "/",
   "icons": [
     {
