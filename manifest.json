@@ -3,7 +3,7 @@
   "short_name": "dengiken",
   "theme_color": "#00ffff",
   "background_color": "#979494",
-  "display": "standalone",
+  "display": "display_override",
   "start_url": "/",
   "scope": "/",
   "icons": [
