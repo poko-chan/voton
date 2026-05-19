@@ -1,9 +1,9 @@
 {
   "name": "Voton dengiken",
   "short_name": "dengiken",
-  "theme_color": "#1a1a1a", 
+  "theme_color": "#1a1a1a",
   "background_color": "#1a1a1a",
-  "display": "standalone",
+  "display": "fullscreen", 
   "start_url": "/",
   "icons": [
     {
