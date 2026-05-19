@@ -4,15 +4,13 @@
   "theme_color": "#00ffff",
   "background_color": "#1a1a1a",
   "display": "standalone",
-  "orientation": "portrait",
   "start_url": "/",
   "scope": "/",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "icon.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/png"
     }
   ]
 }
