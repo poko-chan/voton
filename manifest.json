@@ -5,12 +5,12 @@
   "background_color": "#979494",
   "display": "standalone",
   "start_url": "/voton-dengiken/index.html",
-  "scope": "/voton-dengiken/"
+  "scope": "/voton-dengiken/",
   "icons": [
     {
       "src": "./logo.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
     }
   ]
 }
