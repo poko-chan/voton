@@ -4,13 +4,13 @@
   "theme_color": "#00ffff",
   "background_color": "#979494",
   "display": "standalone",
-  "start_url": "/voton-dengiken/index.html",
-  "scope": "/voton-dengiken/",
+  "start_url": "./index.html",
+  "scope": "./",
   "icons": [
     {
-      "src": "./logo.png",
+      "src": "logo.png",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/png"
     }
   ]
 }
