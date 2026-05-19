@@ -1,14 +1,29 @@
+const CACHE_NAME = 'voton-cache-v1';
+const ASSETS_TO_CACHE = [
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/logo.png', // ロゴなども入れておくと完璧です
+  '/icon.png'
+];
+
+// インストール時にファイルを保存
 self.addEventListener('install', (event) => {
-  console.log('SW: Install Event');
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      console.log('ファイルをキャッシュ中...');
+      return cache.addAll(ASSETS_TO_CACHE);
+    })
+  );
   self.skipWaiting();
 });
 
-self.addEventListener('activate', (event) => {
-  console.log('SW: Activate Event');
-  return self.clients.claim();
-});
-
+// ネットがない時はキャッシュから出す
 self.addEventListener('fetch', (event) => {
-  // ネットワークにそのまま通す（空にせず、これを書くのが超重要！）
-  event.respondWith(fetch(event.request));
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      // キャッシュがあればそれを返す、なければネットに取りに行く
+      return response || fetch(event.request);
+    })
+  );
 });
