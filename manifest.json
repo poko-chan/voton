@@ -1,14 +1,14 @@
 {
   "name": "Voton dengiken",
   "short_name": "dengiken",
-  "theme_color": "#0ff",
+  "theme_color": "#00ffff",
   "background_color": "#979494",
   "display": "standalone",
   "start_url": "./index.html",
   "icons": [
     {
-      "src": "https://dengiken.jp/website/wp-content/themes/dengiken/img/logo.png",
-      "sizes": "202x229",
+      "src": "./icon.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
