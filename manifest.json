@@ -2,15 +2,17 @@
   "name": "Voton dengiken",
   "short_name": "dengiken",
   "theme_color": "#00ffff",
-  "background_color": "#979494",
-  "display": "display_override",
+  "background_color": "#1a1a1a",
+  "display": "standalone",
+  "orientation": "portrait",
   "start_url": "/",
   "scope": "/",
   "icons": [
     {
       "src": "logo.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
