@@ -35,11 +35,11 @@ export default async function handler(req, res) {
     });
     const userData = await userResponse.json();
 
-    // 💡 ここで userData.id や userData.email が取得できます！
-    // 必要に応じて、Neonデータベースに保存したり、JWTを発行してクッキーに保存する処理をここに書きます。
-    console.log("ログインしたユーザー:", userData.login);
+    // 💡 userDataの中にGitHubユーザーの「id」や「name」が入っています！
+    // 開発中の確認用としてログに出力（Vercelの管理画面で見られます）
+    console.log("ログイン成功ユーザー:", userData.login);
 
-    // 3. ログイン完了後、トップページ（/）へリダイレクト
+    // 3. ログイン完了後、サイトのトップページ（/）へリダイレクト（送り返す）
     res.writeHead(302, { Location: '/' });
     res.end();
 
