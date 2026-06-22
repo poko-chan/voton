@@ -1,3 +1,13 @@
+/* style.css */
+body {
+    background-image: url('/resources/img/login/login-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+  
+  
   /* Liquid Glass Card */
   .liquid-glass-card {
     position: relative;
