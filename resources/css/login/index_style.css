@@ -1,10 +1,11 @@
 /* style.css */
 body {
-    background-image: url('/resources/img/login/login-background.jpg');
+    background-image: url('/resources/img/login/background-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
+    filter: blur(1px);
 }
   
   
