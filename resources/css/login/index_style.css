@@ -1,11 +1,22 @@
 /* style.css */
 body {
-    background-image: url('/resources/img/login/background-image.jpg');
+    position: relative;
+    z-index: 1;
+}
+body::before{
+  content: "";
+  position: absolute;
+  background-image: url('/resources/img/login/background-image.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-position: center center;
     background-attachment: fixed;
     filter: blur(1px);
+    z-index: -1;
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
 }
   
   
