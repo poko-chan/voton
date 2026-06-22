@@ -1,12 +1,5 @@
 body {
-<<<<<<< HEAD
-  background-image: url('/resources/img/login/login-background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-=======
-    position: relative;
+      position: relative;
     z-index: 1;
     width: 100vw;
     height: 100vh;
@@ -28,7 +21,6 @@ body::before{
     bottom: -3px;
     left: -3px;
     right: -3px;
->>>>>>> 2d8c1c9fc0475eafbc981be60a3f7b79b0bf917f
 }
 
   /* 画面中央ぞろえ用のスタイル（背景に色や画像を置くとグラスエフェクトが映えます） */
@@ -203,11 +195,4 @@ body::before{
   .glass-button:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
-  }
-  
-  .card-tip {
-    font-size: 12px;
-    text-align: center;
-    color: #e0e6ed;
-    margin: 16px 0 0 0;
   }
