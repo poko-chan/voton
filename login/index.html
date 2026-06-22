@@ -3,12 +3,11 @@
 <head>
     <link rel="stylesheet" href="/resources/css/login/index_style.css">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/resources/css/index_style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voton accountにログイン</title>
+    <title>Voton account</title>
 </head>
 <body>
-    <svg width="0" height="0" style="position: absolute;">
+  <svg width="0" height="0" style="position: absolute;">
     <defs>
       <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%">
         <feTurbulence 
@@ -32,33 +31,41 @@
         />
       </filter>
     </defs>
-    </svg>
+  </svg>
   
-  <!-- Liquid Glass Card -->
-  <div class="liquid-glass-card">
-    <div class="card-content">
-      <div class="card-header">
-        <div class="user-info">
-          <div class="avatar">
-            <svg class="avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
+  <div class="center-container">
+    <div class="liquid-glass-card">
+      <div class="card-content">
+        <div class="card-header">
+          <div class="user-info">
+            <div class="avatar">
+              <svg class="avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="user-details">
+              <p class="user-name">Jane Doe</p>
+              <p class="user-role">UX Designer</p>
+            </div>
           </div>
-          <div class="user-details">
-            <p class="user-name">Jane Doe</p>
-            <p class="user-role">UX Designer</p>
+          <svg class="notification-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+        </div>
+        
+        <div class="card-body">
+          <h3 class="card-title">Styled Component</h3>
+          <p class="card-description">This is a sample of how your content might look inside.</p>
+          
+          <div class="button-group">
+            <button class="glass-button primary-btn">Votonアカウントでログイン</button>
+            <a href="./signup/index.html" class="glass-button secondary-btn">新規会員登録</a>
           </div>
         </div>
-        <svg class="notification-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-        </svg>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Styled Component</h3>
-        <p class="card-description">This is a sample of how your content might look inside.</p>
-        <button class="glass-button">Get Started</button>
+        
+        <p class="card-tip">Tip: Try adjusting the sliders and colors to see real-time changes!</p>
       </div>
     </div>
   </div>
