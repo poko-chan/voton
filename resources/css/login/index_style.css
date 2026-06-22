@@ -153,10 +153,3 @@ body {
     outline: none;
     box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
   }
-  
-  .card-tip {
-    font-size: 12px;
-    text-align: center;
-    color: #e0e6ed;
-    margin: 16px 0 0 0;
-  }
